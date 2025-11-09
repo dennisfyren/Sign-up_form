@@ -1,0 +1,123 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    --button-color: #596D48;
+    --input-border: #E5E7EB;
+}
+@font-face {
+    font-family: CustomFont;
+    src: url('./Assets/Norse-Bold.otf');
+};
+:root {
+    
+}
+.wrapper {
+    display: flex;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vw;
+}
+.content > p {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-right: 4rem;
+}
+.content > p:first-of-type {
+    margin-top: 10vh;
+    width: 40vw;
+}
+
+.user-form{
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    line-height: 3rem;
+    border-top: 1px solid var(--input-border);
+    border-bottom: 1px solid var(--input-border);
+}
+.form {
+    display: flex;
+    justify-content: flex-start;
+}
+.form p {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+label {
+    font-size: 0.9rem;
+    height: 2rem;
+}
+input {
+    height: 1.3rem;
+    border: 1px solid var(--input-border);
+    border-radius: 0.2rem;
+}
+input:invalid {
+    border: 1px solid red;
+}
+input:focus {
+    border: 1px solid blue;
+}
+.submit {
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-top: 1.3rem;
+    background-color: var(--button-color);
+    color: white;
+    font-weight: bold;
+    border: 1px solid var(--button-color);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+#login {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: 200;
+}
+#login a{
+    font-weight: bold;
+    text-decoration: none;
+}
+.side {
+    width: 30vw;
+}
+#background {
+    position: relative;
+    width: 30vw;
+    height: calc(100vw /2);
+    top: 0;
+    left: 0;
+}
+.logo {
+    position: absolute;
+    display: flex;
+    font-family: CustomFont;
+    font-size: 3rem;
+    align-items: center;
+    color: white;
+    z-index: 30;
+    top: 300px;
+    width: 30vw;
+    justify-content: center;
+}
+#icon {
+    height: 120px;
+}
+.logo::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    background-color: rgb(24, 23, 23);
+    opacity: 40%;
+    width: 30vw;
+    height: 120px;
+}
